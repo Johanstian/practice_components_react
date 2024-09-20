@@ -12,6 +12,11 @@ export const MySecondComponent = () => {
         "Harry Potter y las Reliquias de la Muerte",
     ]
 
+    const listBooks = [];
+    books.forEach((book, index) => {
+        listBooks.push(<li key={ index }>{ book }</li>)
+    });
+
     return (
         <>
             <h1>MySecondComponent</h1>
@@ -22,6 +27,10 @@ export const MySecondComponent = () => {
                             return <li key={ index }>{ book }</li>
                         })
                     }
+                </ul>
+
+                <ul>
+                    { listBooks }
                 </ul>
             </div>
         </>
